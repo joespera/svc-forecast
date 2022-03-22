@@ -1,0 +1,49 @@
+/** FORM STUFF **/
+input {
+    padding: 9px;
+    border: solid 1px #E5E5E5;
+    width: 20%;
+}
+.info {
+  display:none;
+}
+label {
+    font-size: 18px;
+    margin-left: 0px;
+}
+button, input[type="submit"] {
+    width: auto;
+    padding: 9px 15px;
+    background: #1E90FF;
+    border: 0;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+/** TABLE STUFF **/
+table {
+  text-align: left;
+  position: relative;
+  border-collapse: collapse;
+  background-color: #f6f6f6;
+}
+td, th {
+  border: 1px solid #999;
+  padding: 20px;
+}
+th {
+  background: #1E90FF;
+  color: white;
+  border-radius: 0;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+}
+tbody > tr:hover {
+  background-color: #C6E2FF;
+}
+
+.error{
+  font-size: 18px;
+  color: red;
+}
