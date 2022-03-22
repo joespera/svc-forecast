@@ -1,5 +1,18 @@
-@()
+@import forms.ForecastInputs
+@import helper._
 
-@main("Welcome to Play") {
-  <h1>Welcome to Play!</h1>
+@(forecastForm: Form[ForecastInputs.ForecastData], error: Option[String] = None)(implicit messages: Messages)
+
+@main("Forecast") {
+  @if(error.isDefined) {
+    <div class="error">@error.get</div>
+  }
+  @helper.form(action = routes.ForecastController.post()) {
+    <fieldset>
+      @helper.inputText(forecastForm("latitude"))
+      @helper.inputText(forecastForm("longitude"))
+      @helper.select(forecastForm("units"), Seq("imperial" -> "imperial", "metric" -> "metric", "standard" -> "standard"))
+      <button id="submitBtn" type="submit" name="submit">button</button>
+    </fieldset>
+  }
 }

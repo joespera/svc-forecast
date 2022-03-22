@@ -1,0 +1,23 @@
+@import models.FormattedForecast
+@import helper._
+
+@(formattedForecast: FormattedForecast)(implicit messages: Messages)
+
+@main("Forecast") {
+  <table>
+    <tr>
+      <th>Day of Week</th>
+      <th>Date</th>
+      <th>Day's Low</th>
+      <th>Day's High</th>
+    </tr>
+      @formattedForecast.days.map { day =>
+      <tr>
+        <td>@day.dayOfWeek</td>
+        <td>@day.date</td>
+        <td>@day.low</td>
+        <td>@day.high</td>
+      </tr>
+      }
+  </table>
+}
