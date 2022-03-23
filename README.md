@@ -3,6 +3,7 @@
 Sample service that leverages Scala and Play! framework to deliver a weekly forecast interface via Open Weather.
 
 ## Requirements
+- jdk previously installed 
 - Installation of scala and sbt (sbt is a scala build tool required by Play!)
   (Easiest method: Install hombrew and `brew install scala sbt`)
 
