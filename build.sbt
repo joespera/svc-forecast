@@ -9,6 +9,7 @@ scalaVersion := "2.13.8"
 
 libraryDependencies += guice //dependency injection
 libraryDependencies += ws //web service lib
+libraryDependencies += "io.lemonlabs" %% "scala-uri" % "4.0.1"
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test
 libraryDependencies += "org.scalatestplus" %% "mockito-3-12" % "3.2.10.0" % "test"
 
