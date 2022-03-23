@@ -6,13 +6,14 @@ import play.api.Configuration
 import javax.inject.{Inject, Provider}
 
 //inject this class for access to global configuration
-case class AppConfig(openWeatherHost: String, openWeatherPath: String, openWeatherApiKey: String)
+case class AppConfig(scheme: String, openWeatherHost: String, openWeatherPath: String, openWeatherApiKey: String)
 
 object AppConfig {
 
   //constructor, takes typesafe config and produces our AppConfig model
   def apply(config: Config): AppConfig = {
     AppConfig(
+      config.getString("openWeather.scheme"),
       config.getString("openWeather.host"),
       config.getString("openWeather.path"),
       config.getString("openWeather.apiKey")
