@@ -8,11 +8,11 @@ Sample service that leverages Scala and Play! framework to deliver a weekly fore
   (Easiest method: Install hombrew and `brew install scala sbt`)
 
 ## Running app
-- Navigate to project directory and run `sbt run`
+- Navigate to root directory and run `sbt run`
 - In your browser navigate to `localhost:9000/forecast`
 
 ## Running unit tests
-- Navigate to project directory and run `sbt test`
+- Navigate to root directory and run `sbt test`
 
 
 ### Misc Notes
